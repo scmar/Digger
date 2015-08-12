@@ -20,7 +20,7 @@
 
 #define NUM_SPRITES 21
 
-#define NUM_LEVELS 153
+#define NUM_LEVELS 151
 
 #define WORLD_W 20
 #define WORLD_H 14
