@@ -20,7 +20,7 @@
 
 #define NUM_SPRITES 21
 
-#define NUM_LEVELS 151
+#define NUM_LEVELS 152
 
 #define WORLD_W 20
 #define WORLD_H 14
@@ -52,7 +52,7 @@
 #define EEPROMTOKEN2 0x66
 #define EEPROMTOKEN3 0x39
 
-#define LIVES 250
+#define LIVES 100
 
 #define BITREF 6
 #define BITCOUNT 3

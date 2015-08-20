@@ -119,12 +119,17 @@ void loop() {
         updateCursor();
         updatePhysics();
         drawWorld();
+        if (lives <1 || lives>LIVES) {
+          //curLevel=NUM_LEVELS-2;
+          gamestate=GAMEOVER;
+        }
         break;
       case GAMEOVER:
+        //initWorld(NUM_LEVELS-2);
         newGame();
         //saveEEPROM();
-        gamestate = PAUSED;
-        initWorld(curLevel);
+        dead = false;
+        gamestate = RUNNING;
         break;
       default:
         break;
@@ -201,7 +206,7 @@ void setTile( byte sprite) {
   }
 }
 void nextLevel() {
-  if (curLevel < NUM_LEVELS) {
+  if (curLevel < NUM_LEVELS-3) {
     (gamemode == EASY) ? cureasy++ : curhard++;
     maxeasy = max(maxeasy, cureasy);
     maxhard = max(maxhard, curhard);

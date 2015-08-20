@@ -66,7 +66,7 @@ void moveMonster(byte x, byte y, byte sprite) {
   }
 }
 void sIND(byte x, byte y, byte sprite) { //setIfNotWorldBorder
-  if (x > 1 && x < WORLD_W - 1 && y > 1 && y < WORLD_H - 1)   world[x][y] = sprite;
+  if (x > 0 && x < WORLD_W - 1 && y > 0 && y < WORLD_H - 1)   world[x][y] = sprite;
 }
 
 byte getNewDirection(byte x, byte y) {
